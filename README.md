@@ -63,7 +63,22 @@ We tuned hyperparameters with a small grid search (LogReg: C; RF: n_estimators, 
 - `labeled_5000.csv` → Cleaned labeled dataset  
 - `unlabeled_25000.csv` → Cleaned unlabeled dataset  
 - `income_predictions.csv` → Predictions for the unlabeled individuals  
-- Trained model saved with `joblib`  
+- Trained model saved with `joblib`
+- plots
+
+Confusion matrix reveals the error profile, e.g., whether the model tends to miss high-income cases (FN) or overpredict them (FP). This is more informative than accuracy alone on imbalanced data.
+
+ROC curve shows performance across all thresholds. Together with ROC-AUC, it indicates separability. If business costs favor catching more >50K cases, you can pick a threshold that increases recall at the expense of precision.
+
+Protocol
+We evaluate each model on the same held-out (stratified) test split and export:
+
+outputs/confusion_<Model>.png
+
+outputs/roc_<Model>.png
+
+This complements outputs/metrics.json (Accuracy, Precision, Recall, F1, ROC-AUC, best hyperparameters).
+
 
 ---
 
