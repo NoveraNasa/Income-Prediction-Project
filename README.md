@@ -54,6 +54,7 @@ Random Forest: ensemble of trees, bootstrap sampling + random features, majority
 ## 📈 Evaluation
 
 We used a stratified 80/20 train-test split to maintain class balance. F1-score was chosen as the primary metric because the dataset is imbalanced and we want a trade-off between precision and recall for the >50K class.
+We tuned hyperparameters with a small grid search (LogReg: C; RF: n_estimators, max_depth, min_samples_leaf) using 5-fold CV and selected configurations by F1. Best params and cross-validated scores are logged in outputs/metrics.json.
 
 ---
 
