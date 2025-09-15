@@ -53,13 +53,7 @@ Random Forest: ensemble of trees, bootstrap sampling + random features, majority
 
 ## 📈 Evaluation
 
-Metrics used:
-
-- Accuracy  
-- Precision, Recall, F1-score  
-- ROC curve and AUC  
-
-The **best-performing model** was selected and used to predict the 25,000 unlabeled incomes.
+We used a stratified 80/20 train-test split to maintain class balance. F1-score was chosen as the primary metric because the dataset is imbalanced and we want a trade-off between precision and recall for the >50K class.
 
 ---
 
