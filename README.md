@@ -4,6 +4,8 @@ This repository contains the solution for the **Intelligent Data Analysis**  pro
 The goal is to **predict individual income groups (<=50K or >50K)** from demographic and employment data, and to assign predictions for the 25,000 individuals with unknown income levels.
 
 ---
+**Problem statement**
+Given feature vector x ∈ ℝ^d (categorical one-hot encoded + numeric scaled), learn f(x) = P(y=1|x) with y ∈ {0,1}, where y=1 ⇔ Income >50K. We optimize regularized empirical risk and select the best model using F1-score on a held-out test set. Finally, we apply f to the 25,000 unlabeled individuals (Income = “?”) to impute labels.
 
 ## 📊 Dataset
 
