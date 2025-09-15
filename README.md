@@ -45,15 +45,9 @@ Given feature vector x ∈ ℝ^d (categorical one-hot encoded + numeric scaled),
 
 ## 🤖 Models
 
-Implemented and compared several classifiers:
+Logistic Regression: linear classifier, estimates P(y=1|x), uses sigmoid, interpretable weights, L2 regularization.
 
-- 🌳 **Decision Tree Classifier**  
-- 🌲 **Random Forest Classifier**  
-- 📈 **Logistic Regression**  
-- ⚡ **Support Vector Machine (SVM)**  
-- 🔥 **Neural Network (MLPClassifier)**  
-
-Each model was trained using **stratified train-test split** and evaluated with multiple metrics.  
+Random Forest: ensemble of trees, bootstrap sampling + random features, majority vote, handles nonlinearity + provides feature importance. 
 
 ---
 
